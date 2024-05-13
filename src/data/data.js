@@ -164,7 +164,7 @@ const data = [
                 {
                     nivel: "all",
                     title: "Flexão de Quadril Abraço",
-                    description: "Deitado você dobra o seu joelho e puxa ele em direção ao seu peito, segure durante 5 segundo e troque de perna, faça 3 vezes em cada perna. Realizar 3 vezes segurando durante 15 segundos em cada perna.",
+                    description: "Deitado você dobra o seu joelho e puxa ele em direção ao seu peito, segure durante 15 segundo e troque de perna, faça 3 vezes em cada perna.",
                     url: "https://www.youtube.com/embed/AnvSV_gxdAs"
                 },
                 {
