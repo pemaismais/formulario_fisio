@@ -11,7 +11,7 @@ const Results = ({ title, desc, yturl }) => {
           referrerpolicy="strict-origin-when-cross-origin"
           allowFullScreen
         ></iframe>
-        <span >{desc ? desc : "descricao do exercicio "} </span>
+        <span className="text-base opacity-70" >{desc ? desc : "descricao do exercicio "} </span>
     </div>
   );
 }

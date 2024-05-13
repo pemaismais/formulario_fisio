@@ -47,15 +47,15 @@ function Home() {
     <div className="space-y-14">
       <div className=" space-y-3 flex  items-center  m-auto w-96 flex-col mt-5
       md:w-screen" >
-                <div className="bg-white text-2xl p-5 w-80 rounded-md
+        <div className="bg-white text-2xl p-5 w-80 rounded-md
         md:space-x-4 md:p-7 md:w-auto " >
           <span className="font-semibold"> Protocolo de Prevenção LER e DORT </span>
           <br />
-          <span className="text-lg text-opacity-90">Métodos fisioterapêuticos para alívio e prevenção de dores em professoras do ens. Fundamental</span>
+          <span className="text-base opacity-70">Métodos fisioterapêuticos para alívio e prevenção de dores em professoras do ens. Fundamental</span>
         </div>
         <div className=" flex space-y-2 w-80 flex-col align-middle justify-center
         md:w-auto"  >
-          
+
           {data.map((item) => {
             return <Options title={item.title} key={item.title} />;
           })}
