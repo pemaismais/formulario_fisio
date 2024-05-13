@@ -1,20 +1,17 @@
-function Results({ title, desc, yturl }) {
+const Results = ({ title, desc, yturl }) => {
   return (
-    <div>
-      <span>{title ? title : "Nome do exercicio"} </span>
-      <br />
-      <iframe
-        width="300"
-        height="300"
-        src={yturl}
-        title="Elevação Pélvica"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin"
-        allowfullscreen
-      ></iframe>
-      <br />
-      <span>{desc ? desc : "descricao do exercicio "} </span>
+    <div className="bg-white text-lg p-4  w-auto space-y-5 rounded-md flex flex-col justify-center items-center mt-5">
+      <span className="text-2xl font-semibold">{title ? title : "Nome do exercicio"} </span>
+        <iframe
+        className="max-w-md h-96"
+          src={yturl}
+          title="Elevação Pélvica"
+          frameborder="0"
+          allow=" clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
+        <span >{desc ? desc : "descricao do exercicio "} </span>
     </div>
   );
 }

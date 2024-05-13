@@ -8,13 +8,12 @@ Routes,
 Route, } from 'react-router-dom'
 import ResultPage from './pages/ResultPage.jsx'
 
-
-
 ReactDOM.createRoot(document.getElementById('root')).render(
     <Router>
       <Routes>
         <Route path='/' element={<Home/>}> </Route>
         <Route path='/result' element={<ResultPage/>}> </Route>
+
       </Routes>
     </Router>
 )

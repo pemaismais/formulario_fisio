@@ -1,9 +1,11 @@
-import "../App.css";
+import "../index.css";
 import { Link } from "react-router-dom";
 import Options from "../comps/Options.jsx";
 import data from "../data/data.js";
+import Footer from "../comps/Footer.jsx";
 let checkedButtons = [];
 let namesNValues = [];
+let token = null
 
 const getNamesNValues = (buttons) => {
   let array = [];
@@ -33,31 +35,46 @@ const result = () => {
 
   checkedButtons = getCheckedRadioButtons();
   namesNValues = getNamesNValues(checkedButtons);
+  token = generateToken()
 };
+
+const generateToken = () => {
+  return Math.random();
+}
 
 function Home() {
   return (
-    <>
-      <div>
-        <span> Qual região você sente dor: </span>
-        <span> Qual o nível de dor na região: </span>
+    <div className="space-y-14">
+      <div className=" space-y-3 flex  items-center  m-auto w-96 flex-col mt-5
+      md:w-screen" >
+                <div className="bg-white text-2xl p-5 w-80 rounded-md
+        md:space-x-4 md:p-7 md:w-auto " >
+          <span className="font-semibold"> Protocolo de Prevenção LER e DORT </span>
+          <br />
+          <span className="text-lg text-opacity-90">Métodos fisioterapêuticos para alívio e prevenção de dores em professoras do ens. Fundamental</span>
+        </div>
+        <div className=" flex space-y-2 w-80 flex-col align-middle justify-center
+        md:w-auto"  >
+          
+          {data.map((item) => {
+            return <Options title={item.title} key={item.title} />;
+          })}
+          <Link
+            className="place-self-end w-fit h-fit p-2 pl-4 pr-4  bg-blue-700 font-semibold text-slate-50 rounded-md hover:bg-blue-600 transion"
+            to="/result"
+            onClick={() => {
+              result();
+            }}
+          >
+            Enviar
+          </Link>
+        </div>
       </div>
-      {data.map((item) => {
-        return <Options title={item.title} key={item.title} />;
-      })}
+      <Footer />
+    </div>
 
-      <Link
-        to="/result"
-        onClick={() => {
-          result();
-        }}
-      >
-        {" "}
-        clica{" "}
-      </Link>
-    </>
   );
 }
 
 export default Home;
-export { checkedButtons, namesNValues };
+export { checkedButtons, namesNValues, token };
